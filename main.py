@@ -42,12 +42,12 @@ def parse(html):
 
 
 def main():
-    pages_total = get_number_of_pages(get_html(URL)) # ne ok
-    print('{} pages found'.format(pages_total))
-    ads = []
     if os.path.exists(file_path):
         pass
     else:
+        pages_total = get_number_of_pages(get_html(URL))
+        print('{} pages found'.format(pages_total))
+        ads = []
         try:
             for page in range(1, pages_total + 1):
                 print('Page {}/{}'.format(page, pages_total))
